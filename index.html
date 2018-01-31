@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html lang="pt=br">
+  <head>
+    <title>Luis Daniel Assulfi's Portifolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- style.css -->
+	<link rel="stylesheet" href="css/style.css">
+    <!-- Google Montserrat font galery -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <!-- Bootstrap maxcdn -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Luis Daniel Assulfi</a>
+        </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#my-habilities">My Habilities</a></li>
+              <li><a href="#portifolio">Portfolio</a></li>
+              <li><a href="#about-me">About me</a></li>
+              <li><a href="#contact-me">Contact me</a></li>
+            </ul>
+          </div>
+        </div><!-- navbar-header -->
+      </div><!-- container -->
+    </nav><!-- navbar -->
+  
+    <div class="container-fluid bg-1 text-center" id="home">
+      <h3 class="margin">Luis Daniel Assulfi</h3>
+      <img src="https://avatars1.githubusercontent.com/u/26237233?s=400&u=c7974f263c2271feb50d7c196641f08761f10461&v=4" class="img-circle margin" alt="MyGitHubProfilePhoto" style="width:30%">
+      <h3 class="margin">Former civil enginner - Aspiring Software Engineer</h3>
+      <h4>Java - JavaWeb - MySQL - Mobile (Android)</h4>
+    </div><!-- div -->
+    <div class="container-fluid bg-2 text-center" id="my-habilities">
+      <h3 class="margin">My Habilities</h3>
+      <div class="row">
+        <div class="col-md-4">
+          <img src="https://images.sftcdn.net/images/t_optimized,f_auto/p/2f4c04f4-96d0-11e6-9830-00163ed833e7/3163796423/java-runtime-environment-screenshot.png" style="width:50%">
+          <h4>Java Desktop</h4>
+        </div>
+        <div class="col-md-4">
+          <img src="https://upload.wikimedia.org/wikipedia/en/thumb/6/62/MySQL.svg/1200px-MySQL.svg.png" style="width:75%">
+          <h4>MySQL</h4>
+        </div>
+        <div class="col-md-4">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/66/Android_robot.png" style="width:40%">
+          <h4>Android Applications</h4>
+      </div>
+    </div><!-- row -->
+    <div class="row">
+      <div class="col-md-6">
+        <img src="https://avatars2.githubusercontent.com/u/23086798?s=200&v=4">
+        <h4>Java Web</h4>
+      </div>
+      <div class="col-md-6">
+        <img src="http://www.inferotraining.com/images/pages/1441292492vba%20smaller.png">
+        <h4>Visual Basic for Applications</h4>
+      </div>
+    </div><!-- row -->
+  </div>
+    <div class="container-fluid text-center bg-3" id="about-me">
+      <h3 class="margin">About me</h3>
+      <p>My name is Luis Daniel Assulfi. I'm a former civil engineer graduated at State University of 
+      Campinas (UNICAMP). I have post-graduation in mechanical engineer with emphasys in structural analysis and structural design at UNISAL. I'm also studying for another post-graduation in Project Management at UNISAL and Software Enginner at State University of Campinas (UNICAMP).</p>
+    </div><!-- container-fluid -->
+  <div class="container-fluid text-center bg-2" id="portifolio">
+    <h3 class="margin">Portfolio</h3>
+    <h4>There are some of my projects! I hope you enjoy! :D</h4>
+  </div> <!-- container-fluid -->
+  <div class="container-fuid text-center" id="contact-me">
+    <h3 class="margin">Contact me</h3>
+    <div class="row">
+      <div class="col-md-6">
+        e-mail: lassulfi@gmail.com
+      </div>
+      <div class="col-md-6">
+        <a href="#">
+          <img src="https://image.freepik.com/icones-gratis/facebook-logotipo_318-49940.jpg" style="width:10%">
+        </a> /lassulfi
+        <a href="#">
+          <img src="https://n6-img-fp.akamaized.net/free-icon/linkedin-logo_318-76861.jpg?size=338c&ext=jpg" style="width:10%">
+        </a> /lassulfi
+        <a href="https://github.com/lassulfi">
+          <img src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png" style="width:14%">
+        </a> /lassulfi
+      </div>
+    </div>
+  </div><!-- container-fluid -->
+      
+      <footer>
+        
+      </footer>
+     
+      <!-- Smooth transition -->
+    <script>
+      $(document).ready(function(){
+        // Add smooth scrolling to all links in navbar
+        $(".navbar a").on('click', function(event){
+          // Make sure this.hash has a value before overriding default behavior
+          if(this.hash !== ""){
+            // Prevent default anchor click behavior
+            event.preventDefault();
+            // Store hash
+            var hash = this.hash;
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+            $('html,body').animate(
+              {scrollTop: $(hash).offset().top},
+              900,
+              function(){
+                 // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+              }
+            );
+          }
+        });
+      })
+    </script>
+  </body>
